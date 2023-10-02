@@ -1,0 +1,121 @@
+/* CSS styles for the widget */
+
+        .widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .widget-button {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://t4.ftcdn.net/jpg/01/91/93/03/360_F_191930303_c1u8vl5OypVoK5LfcKIfSc17hjjOxVVP.jpg');
+            background-size: cover;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .widget-button:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot {
+            display: none;
+            position: fixed;
+            bottom: 15px;
+            right: 20px;
+            z-index: 9999;
+            width: 350px;
+            height: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            animation: slide-up 0.5s ease-out;
+        }
+
+        .chatbox-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chatbox-title {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+        .chatbox-title img {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .chatbox-close {
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .chatbox-body {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+
+        .chatbox-input {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        .chatbox-input input[type="text"] {
+            flex-grow: 1;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .chatbox-input button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* Add more CSS styles as needed */
+
+        /* Animation for sliding up the chatbot */
+        @keyframes slide-up {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0%);
+            }
+        }
+
+        /* Animation for sliding down the widget button */
+        @keyframes slide-down {
+            from {
+                transform: translateY(0%);
+            }
+            to {
+                transform: translateY(100%);
+            }
+        }
